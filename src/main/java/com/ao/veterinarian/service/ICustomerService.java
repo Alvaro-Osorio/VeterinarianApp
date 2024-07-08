@@ -7,13 +7,15 @@ import java.util.Optional;
 
 public interface ICustomerService {
 
-    Optional<CustomerDTO> findById();
+    Optional<CustomerDTO> findById(Long id);
 
     List<CustomerDTO> findAll();
 
-    void create(CustomerDTO customerDTO);
+    CustomerDTO create(CustomerDTO customerDTO);
 
-    void delete(Long id);
+    CustomerDTO update(CustomerDTO customerDTO, Long id);
+
+    String delete(Long id);
 
 
 }
